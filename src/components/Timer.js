@@ -25,7 +25,7 @@ const Timer = () => {
   }, [runTimer]); //runTimer is the state we want to detect the change
 
   useEffect(() => {
-    if(countDown < 0 && runTimer) {
+    if(countDown <= 0 && runTimer) {
         setRunTimer(false);
         setCountDown(0);
     }
